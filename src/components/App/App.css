@@ -6,13 +6,17 @@
   background-color: #edeff2;
   height: 150px;
   padding: 20px;
-  color: #ba3434;
+  color: #e53935;
 }
 
 .App-intro {
   font-size: large;
 }
 
+.home-card {
+  height: 250px;
+  padding-top: 100px;
+}
 
 /*Reference for spinning logo*/
 /*.App-logo {
