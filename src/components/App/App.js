@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clients from '../Clients/Clients';
+import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clients: []
+    }
+  };
+
+  componentDidMount() {
+    this.getClients();
+  }
+
+  getClients () {
+    const URL = 'http://oncallback.herokuapp.com/clients'
+    axios.get(URL)
+        .then((response) => {
+          this.setState({ clients: response.data })
+          console.log(this.state.clients)
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  };
+
   render() {
     return (
       <div className="App">
@@ -28,13 +52,12 @@ class App extends Component {
           <Col className="col s4">
             <div className="example">
               <Modal
-                header='Modal Header'
                 trigger={
                   <CardPanel className="white lighten-4 black-text home-card">
                      <span>Client Database</span>
                    </CardPanel>
                 }>
-                <p>Testing out Modals</p>
+                <Clients clients={this.state.clients} />
               </Modal>
             </div>
           </Col>
