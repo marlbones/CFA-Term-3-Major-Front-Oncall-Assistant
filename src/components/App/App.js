@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Clients from '../Clients/Clients';
+import Callouts from '../Callouts/Callouts';
 import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
 
@@ -8,12 +9,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clients: []
+      clients: [],
+      callouts: []
     }
   };
 
   componentDidMount() {
     this.getClients();
+    this.getCallouts();
   }
 
   getClients () {
@@ -26,6 +29,14 @@ class App extends Component {
         .catch((error) => {
           console.log(error);
         });
+  };
+
+  getCallouts () {
+    const URL = 'http://oncallback.herokuapp.com/callouts'
+    axios.get(URL)
+      .then((response) => {
+        this.setState({callouts: response.data})
+      });
   };
 
   render() {
@@ -64,13 +75,12 @@ class App extends Component {
           <Col className="col s4">
             <div className="example">
               <Modal
-                header='Modal Header'
                 trigger={
                   <CardPanel className="white lighten-4 black-text home-card">
                      <span>Call Log</span>
                    </CardPanel>
                 }>
-                <p>Testing out Modals</p>
+                <Callouts callouts={this.state.callouts} />
               </Modal>
             </div>
           </Col>
