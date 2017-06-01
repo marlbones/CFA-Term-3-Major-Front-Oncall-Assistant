@@ -18,7 +18,9 @@ class Clients extends Component {
   render() {
     let filteredClients = this.props.clients.filter(
       (client) => {
-        return client.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        return client.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        client.address.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        client.boat_id.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     );
     return (
@@ -27,7 +29,7 @@ class Clients extends Component {
         {console.log(this.props.clients)}
         <input placeholder= "Search for clients" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
         <ul>
-          {this.state.search == '' ? <li></li> : filteredClients.map((client, i) => <li key={i}>{client.name}: {client.boat_id}, {client.nationality}, {client.ethnicity}, {client.language}, {client.address}</li>
+          {this.state.search === '' ? <li></li> : filteredClients.map((client, i) => <li key={i}>{client.name}: {client.boat_id}, {client.nationality}, {client.ethnicity}, {client.language}, {client.address}</li>
           )}
         </ul>
       </div>
