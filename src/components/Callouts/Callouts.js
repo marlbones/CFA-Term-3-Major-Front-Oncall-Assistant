@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Moment from 'react-moment';
 import './Callouts.css';
 import { Table, Input, Row, Col } from 'react-materialize';
+var _ = require('lodash');
 
 class Callouts extends Component {
 
@@ -21,7 +22,7 @@ class Callouts extends Component {
   } else {
     console.log(event.target.checked);
     var array = this.state.rabbit
-    array.splice(event.target.value)
+    _.pull(array, event.target.value)
     this.setState({rabbit: array})
     console.log(this.state.rabbit)
     // var index = this.state.rabbit.indexOf(event.target.value);
@@ -48,36 +49,36 @@ showconsole(){
             <Input name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
           </Col>
           <Col className="col s2">
-            <Input name='March' type='checkbox' label='March' />
+            <Input name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='April' type='checkbox' label='April' />
+            <Input name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='May' type='checkbox' label='May' />
+            <Input name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='June' type='checkbox' label='June' />
+            <Input name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
         </Row>
         <Row>
           <Col className="col s2">
-            <Input name='July' type='checkbox' label='July' />
+            <Input name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='August' type='checkbox' label='August' />
+            <Input name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='September' type='checkbox' label='September' />
+            <Input name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='October' type='checkbox' label='October' />
+            <Input name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='November' type='checkbox' label='November' />
+            <Input name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
           <Col className="col s2">
-            <Input name='December' type='checkbox' label='December' />
+            <Input name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
           </Col>
         </Row>
         <Table>
