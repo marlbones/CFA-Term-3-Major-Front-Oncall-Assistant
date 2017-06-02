@@ -35,7 +35,7 @@ class App extends Component {
     const URL = 'http://oncallback.herokuapp.com/callouts'
     axios.get(URL)
       .then((response) => {
-        this.setState({callouts: response.data})
+        this.setState({callouts: response.data.sort(function(a, b){return b-a})})
       });
   };
 
