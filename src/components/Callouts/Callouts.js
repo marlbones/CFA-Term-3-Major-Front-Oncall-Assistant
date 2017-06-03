@@ -9,37 +9,36 @@ class Callouts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      rabbit: []
+      selectedMonths: []
     }
   };
 
   handleCheckboxChange(event) {
     if(event.target.checked) {
-    var array = this.state.rabbit
-    array.push(event.target.value)
-    console.log(array)
-    this.setState({rabbit: array})
+      var array = this.state.selectedMonths
+      array.push(event.target.value)
+      console.log(array)
+      this.setState({selectedMonths: array})
   } else {
-    console.log(event.target.checked);
-    var array = this.state.rabbit
-    _.pull(array, event.target.value)
-    this.setState({rabbit: array})
-    console.log(this.state.rabbit)
-    // var index = this.state.rabbit.indexOf(event.target.value);
-    // // this.setState({rabbit: this.state.rabbit.pop()})
-    // console.log(index);
+      console.log(event.target.checked);
+      var array = this.state.selectedMonths
+      _.pull(array, event.target.value)
+      this.setState({selectedMonths: array})
+      console.log(this.state.selectedMonths)
   }
 };
 
-showconsole(){
-  console.log(this.state.rabbit);
-}
-
   render() {
+    let filteredCallouts = this.props.callouts.filter(
+      (callout) => {
+        // return callout.month.indexOf(this.state.selectedMonths) !== -1;
+        return _.indexOf(this.state.selectedMonths, callout.month) !== -1;
+      }
+    );
+
     return (
       <div>
         <h5>Call Logs</h5>
-        <button onClick={this.showconsole.bind(this)}> Click Me! </button>
         <p>Select months to display:</p>
         <Row>
           <Col className="col s2">
@@ -92,8 +91,8 @@ showconsole(){
             <th>Length (minutes)</th>
           </thead>
           <tbody>
-            {this.props.callouts.map((callout, i) => <tr key={i}>
-              <td><Moment format="DD/MM/YYYY">{callout.created_at}</Moment></td>
+            {filteredCallouts.map((callout, i) => <tr key={i}>
+              <td>{callout.month}</td>
               <td>{callout.cw_name}</td>
               <td>{callout.client_id}</td>
               <td>{callout.time}</td>
