@@ -37,7 +37,8 @@ class App extends Component {
     const URL = 'http://oncallback.herokuapp.com/callouts'
     axios.get(URL)
       .then((response) => {
-        this.setState({callouts: _.sortBy(response.data, ["day", "month"]).reverse()})
+        console.log(response.data)
+        this.setState({callouts: _.sortBy(response.data, ["month", "day"]).reverse()})
       });
   };
 
@@ -83,6 +84,47 @@ class App extends Component {
                    </CardPanel>
                 }>
                 <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} todayDate={this.state.now} />
+              </Modal>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="col s4">
+            <div className="example">
+              <Modal
+                header='Modal Header'
+                trigger={
+                  <CardPanel className="white lighten-4 black-text home-card">
+                     <span>Distressed Caller Steps</span>
+                   </CardPanel>
+                }>
+                <p>Testing out Modals</p>
+              </Modal>
+            </div>
+          </Col>
+          <Col className="col s4">
+            <div className="example">
+              <Modal
+                header='Modal Header'
+                trigger={
+                  <CardPanel className="white lighten-4 black-text home-card">
+                     <span>Contact Directory</span>
+                   </CardPanel>
+                }>
+                <p>Testing out Modals</p>
+              </Modal>
+            </div>
+          </Col>
+          <Col className="col s4">
+            <div className="example">
+              <Modal
+                header='Modal Header'
+                trigger={
+                  <CardPanel className="white lighten-4 black-text home-card">
+                     <span>Contact Numbers</span>
+                   </CardPanel>
+                }>
+                <p>Testing out Modals</p>
               </Modal>
             </div>
           </Col>
