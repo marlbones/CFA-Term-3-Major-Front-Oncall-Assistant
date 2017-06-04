@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import './Callouts.css';
-import { Table, Input, Row, Col } from 'react-materialize';
+import { Table, Input, Row, Col, Modal, Button } from 'react-materialize';
 import CalloutsForm from '../CalloutsForm/CalloutsForm';
 var _ = require('lodash');
 
@@ -52,49 +52,65 @@ class Callouts extends Component {
     return (
       <div>
         <h5>Call Logs</h5>
-        <p>Log phonecall or callout</p>
-        <CalloutsForm callouts={this.props.callouts} getCallouts={() => this.props.getCallouts()} />
-        <p>Select months to display:</p>
         <Row>
-          <Col className="col s2">
-            <Input name='checkbox' type='checkbox' value="January" label='January' onChange={this.handleCheckboxChange.bind(this)}/>
+          <Col className="col s6">
+            <Modal
+              trigger={
+                <Button waves='light'>Log phonecall or callout</Button>
+              }>
+              <CalloutsForm callouts={this.props.callouts} getCallouts={() => this.props.getCallouts()} />
+            </Modal>
           </Col>
-          <Col className="col s2">
-            <Input name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
-          </Col>
-          <Col className="col s2">
-            <Input name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
+          <Col className="col s6">
+            <Modal
+              bottomSheet
+              trigger={
+                <Button>Select months to display</Button>
+              }>
+                <Row>
+                  <Col className="col s2">
+                    <Input name='checkbox' type='checkbox' value="January" label='January' onChange={this.handleCheckboxChange.bind(this)}/>
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="col s2">
+                    <Input name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                  <Col className="col s2">
+                    <Input name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
+                  </Col>
+                </Row>
+            </Modal>
           </Col>
         </Row>
-        <Row>
-          <Col className="col s2">
-            <Input name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-          <Col className="col s2">
-            <Input name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
-          </Col>
-        </Row>
+        <br />
         <Table>
           <thead>
             <th>Date</th>

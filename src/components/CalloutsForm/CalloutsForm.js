@@ -75,7 +75,7 @@ class CalloutsForm extends Component {
           <option value='Phonecall'>Phonecall</option>
           <option value='Callout'>Callout</option>
         </Input>
-        <input type="text" ref={(input) => { this.lengthInput = input; }} placeholder="Length of callout" />
+        <input type="text" ref={(input) => { this.lengthInput = input; }} placeholder="Length of callout (minutes)" />
         <button onClick={() => this.newCallout()}>Submit</button>
       </div>
     )
