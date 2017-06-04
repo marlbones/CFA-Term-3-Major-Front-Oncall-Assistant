@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import Moment from 'react-moment';
 import './Callouts.css';
 import { Table, Input, Row, Col } from 'react-materialize';
+import CalloutsForm from '../CalloutsForm/CalloutsForm';
 var _ = require('lodash');
+
+
 
 class Callouts extends Component {
 
@@ -39,6 +42,8 @@ class Callouts extends Component {
     return (
       <div>
         <h5>Call Logs</h5>
+        <p>Log phonecall or callout</p>
+        <CalloutsForm />
         <p>Select months to display:</p>
         <Row>
           <Col className="col s2">
