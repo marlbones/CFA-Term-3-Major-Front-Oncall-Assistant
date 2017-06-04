@@ -46,7 +46,7 @@ class Callouts extends Component {
       (callout) => {
         // return callout.month.indexOf(this.state.selectedMonths) !== -1;
         return _.indexOf(this.state.selectedMonths, callout.month) !== -1;
-      }
+      },
     );
 
     return (
