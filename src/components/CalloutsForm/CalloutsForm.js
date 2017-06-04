@@ -7,21 +7,39 @@ class CalloutsForm extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    monthSelected: 'January'
+    monthSelected: 'January',
+    callSelected: 'Phonecall'
   };
   this.handleSelected = this.handleSelected.bind(this);
+  this.handleCallSelected = this.handleCallSelected.bind(this);
 }
 
   handleSelected(e) {
   this.setState({ monthSelected: e.target.value });
 }
+  handleCallSelected(e) {
+  this.setState({ callSelected: e.target.value });
+  }
 
   newCallout() {
     const URL = 'https://oncallback.herokuapp.com/callouts';
-    axios.post(URL + '?month=' + this.state.monthSelected)
+    axios.post(URL + '?day=' + this.dayInput.value
+    + '&month=' + this.state.monthSelected
+    + '&year=' + this.yearInput.value
+    + '&cw_name=' + this.cwName.value
+    + '&client_id=' + this.clientId.value
+    + '&time=' + this.timeInput.value
+    + '&details=' + this.detailsInput.value
+    + '&call_phone=' + this.state.callSelected
+    + '&length=' + this.lengthInput.value )
       .then((response) => {
         console.log(response);
-        this.monthInput = '';
+        this.yearInput.value = '';
+        this.cwName.value = '';
+        this.clientId.value = '';
+        this.timeInput.value = '';
+        this.detailsInput.value = '';
+        this.lengthInput.value = '';
       })
       .catch(function (err) {
         console.log(err)
@@ -31,6 +49,7 @@ class CalloutsForm extends Component {
   render() {
     return (
       <div>
+        <input type="text" ref={(input) => { this.dayInput = input; }} placeholder="Day" />
         <Input type="select" onChange={this.handleSelected} placeholder="Month">
           <option value='January'>January</option>
           <option value='February'>February</option>
@@ -45,6 +64,16 @@ class CalloutsForm extends Component {
           <option value='November'>November</option>
           <option value='December'>December</option>
         </Input>
+        <input type="text" ref={(input) => { this.yearInput = input; }} placeholder="Year" />
+        <input type="text" ref={(input) => { this.cwName = input; }} placeholder="Caseworker" />
+        <input type="text" ref={(input) => { this.clientId = input; }} placeholder="Client ID" />
+        <input type="text" ref={(input) => { this.timeInput = input; }} placeholder="Time of Call" />
+        <input type="text" ref={(input) => { this.detailsInput = input; }} placeholder="Details" />
+        <Input type="select" onChange={this.handleCallSelected} placeholder="Callout or Phonecall">
+          <option value='Phonecall'>Phonecall</option>
+          <option value='Callout'>Callout</option>
+        </Input>
+        <input type="text" ref={(input) => { this.lengthInput = input; }} placeholder="Length of callout" />
         <button onClick={() => this.newCallout()}>Submit</button>
       </div>
     )
