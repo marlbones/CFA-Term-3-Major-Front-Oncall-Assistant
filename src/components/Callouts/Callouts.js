@@ -107,7 +107,7 @@ class Callouts extends Component {
           </thead>
           <tbody>
             {filteredCallouts.map((callout, i) => <tr key={i}>
-              <td>{callout.month}</td>
+              <td>{callout.day} {callout.month} {callout.year}</td>
               <td>{callout.cw_name}</td>
               <td>{callout.client_id}</td>
               <td>{callout.time}</td>
