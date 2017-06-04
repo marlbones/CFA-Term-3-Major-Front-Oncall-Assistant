@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Moment from 'react-moment';
+import moment from 'moment';
 import './Callouts.css';
 import { Table, Input, Row, Col } from 'react-materialize';
+import CalloutsForm from '../CalloutsForm/CalloutsForm';
 var _ = require('lodash');
 
 class Callouts extends Component {
@@ -9,8 +10,20 @@ class Callouts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedMonths: []
+      selectedMonths: [],
     }
+  };
+
+  componentDidMount() {
+    this.dater();
+  };
+
+  dater() {
+    let todayDate = moment(this.props.todayDate).format('MMMM');
+    let stringDate = String(todayDate)
+    let dateArray = this.state.selectedMonths;
+    dateArray.push(stringDate)
+    this.setState({selectedMonths: dateArray})
   };
 
   handleCheckboxChange(event) {
@@ -33,12 +46,14 @@ class Callouts extends Component {
       (callout) => {
         // return callout.month.indexOf(this.state.selectedMonths) !== -1;
         return _.indexOf(this.state.selectedMonths, callout.month) !== -1;
-      }
+      },
     );
 
     return (
       <div>
         <h5>Call Logs</h5>
+        <p>Log phonecall or callout</p>
+        <CalloutsForm callouts={this.props.callouts} getCallouts={() => this.props.getCallouts()} />
         <p>Select months to display:</p>
         <Row>
           <Col className="col s2">
@@ -92,7 +107,7 @@ class Callouts extends Component {
           </thead>
           <tbody>
             {filteredCallouts.map((callout, i) => <tr key={i}>
-              <td>{callout.month}</td>
+              <td>{callout.day} {callout.month} {callout.year}</td>
               <td>{callout.cw_name}</td>
               <td>{callout.client_id}</td>
               <td>{callout.time}</td>

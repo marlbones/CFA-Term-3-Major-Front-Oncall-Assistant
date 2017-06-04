@@ -4,13 +4,15 @@ import Clients from '../Clients/Clients';
 import Callouts from '../Callouts/Callouts';
 import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
+var _ = require('lodash');
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       clients: [],
-      callouts: []
+      callouts: [],
+      now: new Date()
     }
   };
 
@@ -35,7 +37,7 @@ class App extends Component {
     const URL = 'http://oncallback.herokuapp.com/callouts'
     axios.get(URL)
       .then((response) => {
-        this.setState({callouts: response.data.sort(function(a, b){return b-a})})
+        this.setState({callouts: _.sortBy(response.data, ["day", "month"]).reverse()})
       });
   };
 
@@ -80,7 +82,7 @@ class App extends Component {
                      <span>Call Log</span>
                    </CardPanel>
                 }>
-                <Callouts callouts={this.state.callouts} />
+                <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} todayDate={this.state.now} />
               </Modal>
             </div>
           </Col>
