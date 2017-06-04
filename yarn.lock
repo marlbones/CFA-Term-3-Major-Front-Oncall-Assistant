@@ -4827,10 +4827,6 @@ react-materialize@^0.18.4:
     react "^15.4.2"
     react-dom "^15.4.2"
 
-react-moment@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-0.2.2.tgz#349e284ad0483ab6ec109a244586e401ce9d6b50"
-
 react-scripts@1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.0.7.tgz#fe1436dda03bb45465c76d097cfea4f32eb7cbbb"

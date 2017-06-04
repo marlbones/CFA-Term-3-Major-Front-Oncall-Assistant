@@ -10,7 +10,8 @@ class App extends Component {
     super(props);
     this.state = {
       clients: [],
-      callouts: []
+      callouts: [],
+      now: new Date()
     }
   };
 
@@ -80,7 +81,7 @@ class App extends Component {
                      <span>Call Log</span>
                    </CardPanel>
                 }>
-                <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} />
+                <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} todayDate={this.state.now} />
               </Modal>
             </div>
           </Col>

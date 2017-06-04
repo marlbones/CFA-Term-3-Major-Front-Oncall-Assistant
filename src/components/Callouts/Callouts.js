@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import Moment from 'react-moment';
+import moment from 'moment';
 import './Callouts.css';
 import { Table, Input, Row, Col } from 'react-materialize';
 import CalloutsForm from '../CalloutsForm/CalloutsForm';
 var _ = require('lodash');
-
-
 
 class Callouts extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      selectedMonths: []
+      selectedMonths: [],
     }
+  };
+
+  componentDidMount() {
+    this.dater();
+  };
+
+  dater() {
+    let todayDate = moment(this.props.todayDate).format('MMMM');
+    let stringDate = String(todayDate)
+    let dateArray = this.state.selectedMonths;
+    dateArray.push(stringDate)
+    this.setState({selectedMonths: dateArray})
   };
 
   handleCheckboxChange(event) {
