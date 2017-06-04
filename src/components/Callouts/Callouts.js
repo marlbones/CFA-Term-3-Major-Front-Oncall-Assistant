@@ -43,7 +43,7 @@ class Callouts extends Component {
       <div>
         <h5>Call Logs</h5>
         <p>Log phonecall or callout</p>
-        <CalloutsForm />
+        <CalloutsForm callouts={this.props.callouts} getCallouts={() => this.props.getCallouts()} />
         <p>Select months to display:</p>
         <Row>
           <Col className="col s2">

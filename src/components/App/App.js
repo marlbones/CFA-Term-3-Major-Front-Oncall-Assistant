@@ -80,7 +80,7 @@ class App extends Component {
                      <span>Call Log</span>
                    </CardPanel>
                 }>
-                <Callouts callouts={this.state.callouts} />
+                <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} />
               </Modal>
             </div>
           </Col>

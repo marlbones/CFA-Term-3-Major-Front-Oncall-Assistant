@@ -35,11 +35,13 @@ class CalloutsForm extends Component {
       .then((response) => {
         console.log(response);
         this.yearInput.value = '';
+        this.dayInput.value = '';
         this.cwName.value = '';
         this.clientId.value = '';
         this.timeInput.value = '';
         this.detailsInput.value = '';
         this.lengthInput.value = '';
+        this.props.getCallouts();
       })
       .catch(function (err) {
         console.log(err)
