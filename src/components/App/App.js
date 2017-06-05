@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Clients from '../Clients/Clients';
 import Callouts from '../Callouts/Callouts';
+import OnCallGuide from '../OnCallGuide/OnCallGuide';
 import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
 var _ = require('lodash');
@@ -53,13 +54,12 @@ class App extends Component {
           <Col className="col s4">
             <div className="example">
               <Modal
-                header='Modal Header'
                 trigger={
                   <CardPanel className="white lighten-4 black-text home-card">
-                     <span>On-Call Steps</span>
+                     <span>On-Call Guide</span>
                    </CardPanel>
                 }>
-                <p>Testing out Modals</p>
+                <OnCallGuide />
               </Modal>
             </div>
           </Col>
