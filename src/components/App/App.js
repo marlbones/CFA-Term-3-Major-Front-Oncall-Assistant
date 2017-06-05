@@ -93,10 +93,9 @@ class App extends Component {
           <Col className="col s4">
             <div className="example">
               <Modal
-                header='Modal Header'
                 trigger={
                   <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Distressed Caller Steps</span>
+                     <span>Distressed Caller Guide</span>
                    </CardPanel>
                 }>
                 <DistressedCaller />
