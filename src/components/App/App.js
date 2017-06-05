@@ -52,82 +52,82 @@ class App extends Component {
           <h4>On-Call Assistant</h4>
         </div>
         <br />
-        <Row>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>On-Call Guide</span>
-                   </CardPanel>
-                }>
-                <OnCallGuide />
-              </Modal>
-            </div>
-          </Col>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Client Database</span>
-                   </CardPanel>
-                }>
-                <Clients clients={this.state.clients} />
-              </Modal>
-            </div>
-          </Col>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Call Log</span>
-                   </CardPanel>
-                }>
-                <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} todayDate={this.state.now} />
-              </Modal>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Distressed Caller Guide</span>
-                   </CardPanel>
-                }>
-                <DistressedCaller />
-              </Modal>
-            </div>
-          </Col>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Contact Directory</span>
-                   </CardPanel>
-                }>
-                <ContactDirectory />
-              </Modal>
-            </div>
-          </Col>
-          <Col className="col s4">
-            <div className="example">
-              <Modal
-                trigger={
-                  <CardPanel className="white lighten-4 black-text home-card">
-                     <span>Admin</span>
-                   </CardPanel>
-                }>
-                <p>Admin capabilities in development.</p>
-              </Modal>
-            </div>
-          </Col>
-        </Row>
+        <div className="flexbox">
+          <Row>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>On-Call Guide</span>
+                     </CardPanel>
+                  }>
+                  <OnCallGuide />
+                </Modal>
+              </div>
+            </Col>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>Client Database</span>
+                     </CardPanel>
+                  }>
+                  <Clients clients={this.state.clients} />
+                </Modal>
+              </div>
+            </Col>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>Call Log</span>
+                     </CardPanel>
+                  }>
+                  <Callouts callouts={this.state.callouts} getCallouts={() => this.getCallouts()} todayDate={this.state.now} />
+                </Modal>
+              </div>
+            </Col>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>Distressed Caller Guide</span>
+                     </CardPanel>
+                  }>
+                  <DistressedCaller />
+                </Modal>
+              </div>
+            </Col>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>Contact Directory</span>
+                     </CardPanel>
+                  }>
+                  <ContactDirectory />
+                </Modal>
+              </div>
+            </Col>
+            <Col className="col m6 s12 l4">
+              <div className="example">
+                <Modal
+                  trigger={
+                    <CardPanel className="white lighten-4 black-text home-card">
+                       <span>Admin</span>
+                     </CardPanel>
+                  }>
+                  <p>Admin capabilities in development.</p>
+                </Modal>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }

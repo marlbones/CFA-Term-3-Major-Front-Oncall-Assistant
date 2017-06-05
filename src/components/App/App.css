@@ -18,6 +18,13 @@
   padding-top: 100px;
 }
 
+.flexbox {
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
 /*Reference for spinning logo*/
 /*.App-logo {
   animation: App-logo-spin infinite 20s linear;
