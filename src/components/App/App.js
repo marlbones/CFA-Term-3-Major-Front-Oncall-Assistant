@@ -4,6 +4,7 @@ import Clients from '../Clients/Clients';
 import Callouts from '../Callouts/Callouts';
 import OnCallGuide from '../OnCallGuide/OnCallGuide';
 import DistressedCaller from '../DistressedCaller/DistressedCaller';
+import ContactDirectory from '../ContactDirectory/ContactDirectory';
 import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
 var _ = require('lodash');
@@ -105,13 +106,12 @@ class App extends Component {
           <Col className="col s4">
             <div className="example">
               <Modal
-                header='Modal Header'
                 trigger={
                   <CardPanel className="white lighten-4 black-text home-card">
                      <span>Contact Directory</span>
                    </CardPanel>
                 }>
-                <p>Testing out Modals</p>
+                <ContactDirectory />
               </Modal>
             </div>
           </Col>
