@@ -9,7 +9,7 @@ class DistressedCaller extends Component {
         <h5>Distressed or suicidal caller guide</h5>
           <p className="bold">1. Acknowledge the caller's distress</p>
           <p>Remember to ask for consent before making enquiries on their behalf <span className="bold">unless</span> there is a risk of self-harm or harm to others.</p>
-          <p className="bold">2. Is the caller at an immediate risk of harm? Do they have a plan to carry out threat?</p>
+          <p className="bold">2. Is the caller at an immediate risk of self-harm or harm to others? Do they have a plan to carry out a threat?</p>
           <Row>
             <Col className="col s6">
               <Modal
