@@ -66,42 +66,42 @@ class Callouts extends Component {
                 <Button className="blue appButton" waves='light'>Months</Button>
               }>
                 <Row>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='checkbox' type='checkbox' value="January" label='January' onChange={this.handleCheckboxChange.bind(this)}/>
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                 </Row>
                 <Row>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
-                  <Col className="col m2 s4">
+                  <Col className="col m2 s5">
                     <Input name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                 </Row>
