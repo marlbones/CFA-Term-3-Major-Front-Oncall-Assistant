@@ -6,20 +6,22 @@ class OnCallGuide extends Component {
   render () {
     return (
       <div>
-        <h5>On-Call Guide</h5>
-        <p className="bold">When you receive a call:</p>
+        <div className="guideIntro">
+          <h5>On-Call Guide</h5>
+          <p className="bold">When you receive a call:</p>
+        </div>
         <Collapsible popout>
           <CollapsibleItem header='1. Check Safety'>
             <p>Check client safety. Make sure the client or Partner Agency staff member is in a safe setting and managing the situation as best as possible.</p>
           </CollapsibleItem>
           <CollapsibleItem header='2. Gather Information'>
             <p>Gather as much info as possible from the caller. Don't forget to gather:</p>
-            <ol className="bold">
-              <li>Identifying information - name, boat id, address, case manager</li>
-              <li>Contact number and language</li>
-              <li>Where the person is, who else is involved (persons, services)?</li>
-              <li>Are there any children present?</li>
-            </ol>
+            <div className="bold">
+              <p>- Identifying information: name, boat id, address, case manager.</p>
+              <p>- Contact number and language.</p>
+              <p>- Where the person is, who else is involved (persons, services)?</p>
+              <p>- Are there any children present?</p>
+            </div>
             <p>From this information, assess whether the incident is considered reportable.</p>
             <p>If the situation calls for it, contact an emergency service and make sure the client is safe before proceeding to the next step.</p>
             <CardPanel>
@@ -28,28 +30,28 @@ class OnCallGuide extends Component {
           </CollapsibleItem>
           <CollapsibleItem header='3. Report'>
             <p>If the event is considered reportable to the Department of Immigration:</p>
-            <ol className="bold">
+            <div className="bold">
               <Modal
                 bottomSheet
                 trigger={
-                  <li>Check the incident reporting timeframes (click).</li>
+                  <p className="cursorChange">- Check the incident reporting timeframes (click).</p>
                 }>
                 <p><span className="bold">Death - </span>Call DIAC within 30 mins - Write report within 1 hour.</p>
                 <p><span className="bold">Critical - </span>Call DIAC within 30 mins - Write report within 1 business day.</p>
                 <p><span className="bold">Major - </span>Call DIAC within 1 hour - Write report within 2 business days.</p>
                 <p><span className="bold">Minor - </span>Call DIAC within 1 day - Write report within 3 business days.</p>
               </Modal>
-              <li>Contact Immigration Hotline - 1800 177 105</li>
-            </ol>
+              <p>- Contact Immigration Hotline - 1800 177 105</p>
+            </div>
             <p>Keep a record of when this call was placed and what was reported.</p>
           </CollapsibleItem>
           <CollapsibleItem header='4. Resources'>
             <p>While on the phone to DIAC, make any requests/seek approval for additional resources. These may be things like:</p>
-            <ol className="bold">
-              <li>Accommodation</li>
-              <li>Emergency Repairs</li>
-              <li>Reconnections</li>
-            </ol>
+            <div className="bold">
+              <p>- Accommodation</p>
+              <p>- Emergency Repairs</p>
+              <p>- Reconnections</p>
+            </div>
             <p>Following approval of resources, a written Payment or Movement request must be submitted the following business day.</p>
           </CollapsibleItem>
           <CollapsibleItem header='5. Record'>

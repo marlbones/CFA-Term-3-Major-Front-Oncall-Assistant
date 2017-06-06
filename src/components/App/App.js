@@ -55,7 +55,7 @@ class App extends Component {
         <div className="flexbox">
           <Row>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">
@@ -67,7 +67,7 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">
@@ -79,7 +79,7 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">
@@ -91,7 +91,7 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">
@@ -103,7 +103,7 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">
@@ -115,7 +115,7 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="example">
+              <div className="cursorChange featureSelect">
                 <Modal
                   trigger={
                     <CardPanel className="white lighten-4 black-text home-card">

@@ -1,0 +1,9 @@
+.tableHead {
+  margin-left: -25px;
+}
+
+.appButton {
+  margin: 10px;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
