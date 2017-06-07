@@ -49,16 +49,16 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h4>On-Call Assistant</h4>
+          <h4 className="main-header">On-Call Assistant</h4>
         </div>
         <br />
         <div className="flexbox">
           <Row>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>On-Call Guide</span>
                      </CardPanel>
                   }>
@@ -67,10 +67,10 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>Client Database</span>
                      </CardPanel>
                   }>
@@ -79,10 +79,10 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>Call Log</span>
                      </CardPanel>
                   }>
@@ -91,10 +91,10 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>Distressed Caller Guide</span>
                      </CardPanel>
                   }>
@@ -103,10 +103,10 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>Contact Directory</span>
                      </CardPanel>
                   }>
@@ -115,10 +115,10 @@ class App extends Component {
               </div>
             </Col>
             <Col className="col m6 s12 l4">
-              <div className="cursorChange featureSelect">
+              <div className="cursorChange">
                 <Modal
                   trigger={
-                    <CardPanel className="white lighten-4 black-text home-card">
+                    <CardPanel className="lighten-4 black-text home-card featureSelect">
                        <span>Admin</span>
                      </CardPanel>
                   }>

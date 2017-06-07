@@ -26,8 +26,9 @@ class Clients extends Component {
     return (
       <div>
         <h5>Client Database</h5>
-        {console.log(this.props.clients)}
-        <input placeholder= "Search for clients" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
+        <div className="input-field">
+          <input placeholder= "Search for clients" type="text" value={this.state.search} onChange={this.updateSearch.bind(this)} />
+        </div>
         <ul>
           {this.state.search === '' ? <li></li> : filteredClients.map((client, i) => <li key={i}><span className="bold">{client.name}:</span> <span className="bluetext">{client.boat_id}</span>
           <span className="bold"> -</span> {client.nationality} <span className="bold">-</span> <span className="bluetext">{client.ethnicity}</span>

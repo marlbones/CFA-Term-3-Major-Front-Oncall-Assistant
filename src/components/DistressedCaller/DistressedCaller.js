@@ -11,10 +11,10 @@ class DistressedCaller extends Component {
           <p>Remember to ask for consent before making enquiries on their behalf <span className="bold">unless</span> there is a risk of self-harm or harm to others.</p>
           <p className="bold">2. Is the caller at an immediate risk of self-harm or harm to others? Do they have a plan to carry out a threat?</p>
           <Row>
-            <Col className="col s6">
+            <Col className="col s12 m6">
               <Modal
                 trigger={
-                  <Button waves='light'>No immediate threat of harm</Button>
+                  <Button className= "waves-effect waves-light appButton" waves='light'>No immediate threat of harm</Button>
                 }>
                 <p className="bold">Encourage engagement in these forms of support:</p>
                 <CardPanel>
@@ -23,10 +23,10 @@ class DistressedCaller extends Component {
                 </CardPanel>
                 <CardPanel>
                   <p className="bold">Counseling</p>
-                  <p><span className="bold">Mental Health Emergency Line - </span>1300 555 788</p>
-                  <p><span className="bold">Lifeline - </span>13 11 14</p>
-                  <p><span className="bold">Samaritans - </span>9381 5555, 1800 198 313</p>
-                  <p><span className="bold">Salvo Care Line  - </span>9442 5777</p>
+                  <p><span className="bold niceRed">Mental Health Emergency Line - </span>1300 555 788</p>
+                  <p><span className="bold niceRed">Lifeline - </span>13 11 14</p>
+                  <p><span className="bold niceRed">Samaritans - </span>9381 5555, 1800 198 313</p>
+                  <p><span className="bold niceRed">Salvo Care Line  - </span>9442 5777</p>
                 </CardPanel>
                 <CardPanel>
                   <p className="bold">Informal Supports</p>
@@ -39,15 +39,15 @@ class DistressedCaller extends Component {
                 </CardPanel>
               </Modal>
             </Col>
-            <Col className="col s6">
+            <Col className="col s12 m6">
               <Modal
                 trigger={
-                  <Button waves='light'>Immediate threat of harm</Button>
+                  <Button className="waves-effect waves-light appButton" waves='light'>Immediate threat of harm</Button>
                 }>
                 <p className="bold">If immediate risk of self-harm or harm to others, contact:</p>
-                <p><span className="bold">Police - </span>000</p>
-                <p><span className="bold">Ambulance - </span>000</p>
-                <p><span className="bold">Mental Health Emergency Response Team - </span>1300 555 788 | 1800 676 822</p>
+                <p><span className="bold niceRed">Police - </span>000</p>
+                <p><span className="bold niceRed">Ambulance - </span>000</p>
+                <p><span className="bold niceRed">Mental Health Emergency Response Team - </span>1300 555 788 | 1800 676 822</p>
               </Modal>
             </Col>
           </Row>

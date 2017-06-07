@@ -6,4 +6,14 @@
   margin: 10px;
   border-radius: 8px;
   text-transform: capitalize;
+  background-color: #e57373;
+}
+
+.appButton:hover {
+  background-color: #ef9a9a;
+}
+
+.checkbox-red[type="checkbox"].filled-in:checked + label:after{
+     border: 2px solid #e57373;
+     background-color: #e57373;
 }

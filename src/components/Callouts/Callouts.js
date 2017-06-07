@@ -56,53 +56,53 @@ class Callouts extends Component {
           <Col className="col s12 m6 callButton">
             <Modal
               trigger={
-                <Button className="blue appButton" waves='light'>Log New</Button>
+                <Button className="waves-effect waves-light appButton" waves='light'>Log New</Button>
               }>
               <CalloutsForm callouts={this.props.callouts} getCallouts={() => this.props.getCallouts()} />
             </Modal>
             <Modal
               bottomSheet
               trigger={
-                <Button className="blue appButton" waves='light'>Months</Button>
+                <Button className="waves-effect waves-light appButton" waves='light'>Months</Button>
               }>
                 <Row>
                   <Col className="col m2 s5">
-                    <Input name='checkbox' type='checkbox' value="January" label='January' onChange={this.handleCheckboxChange.bind(this)}/>
+                    <Input className="filled-in checkbox-red" name='checkbox' type='checkbox' value="January" label='January' onChange={this.handleCheckboxChange.bind(this)}/>
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
+                    <Input className="filled-in checkbox-red" name='February' type='checkbox' label='February' value="February" onChange={this.handleCheckboxChange.bind(this)}/>
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='March' type='checkbox' value='March' label='March' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='April' type='checkbox' value='April' label='April' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='May' type='checkbox' value='May' label='May' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='June' type='checkbox' value='June' label='June' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                 </Row>
                 <Row>
                   <Col className="col m2 s5">
-                    <Input name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='July' type='checkbox' value='July' label='July' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='August' type='checkbox' value='August' label='August' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='September' type='checkbox' value='September' label='September' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='October' type='checkbox' value='October' label='October' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='November' type='checkbox' value='November' label='November' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                   <Col className="col m2 s5">
-                    <Input name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
+                    <Input className="filled-in checkbox-red" name='December' type='checkbox' value='December' label='December' onChange={this.handleCheckboxChange.bind(this)} />
                   </Col>
                 </Row>
             </Modal>

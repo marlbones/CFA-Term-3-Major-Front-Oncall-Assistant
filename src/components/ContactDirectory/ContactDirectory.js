@@ -19,17 +19,26 @@ class ContactDirectory extends Component {
               <p className="bold">ACT service directory</p>
               <CardPanel>
                 <p className="bold">Child Protection</p>
-                <p>Child Protection - 1300 556 729</p>
+                <p><span className="niceRed">Child Protection</span></p>
+                <p className="marginCloser">1300 556 729</p>
               </CardPanel>
               <CardPanel>
                 <p className="bold">Mental Health Services</p>
-                <p>Lifeline - 13 11 14 - Available 24 hours a day, seven days per week. Telephone Crisis Support volunteers provide skilled and knowledgeable support to callers when in crisis.</p>
-                <p>ACT Crisis Assessment and Treatment Team - 1800 629 354 or 6205 1065 - 24-hour, seven day a week service used for assessment and treatment of mentally ill people in crisis situations.</p>
+                <p><span className="niceRed">Lifeline</span></p>
+                <p className="marginCloser">13 11 14</p>
+                <p className="marginCloser">Available 24 hours a day, seven days per week. Telephone Crisis Support volunteers provide skilled and knowledgeable support to callers when in crisis.</p>
+                <p><span className="niceRed">ACT Crisis Assessment and Treatment Team</span></p>
+                <p className="marginCloser">1800 629 354 or 6205 1065</p>
+                <p className="marginCloser">24-hour, seven day a week service used for assessment and treatment of mentally ill people in crisis situations.</p>
               </CardPanel>
               <CardPanel>
                 <p className="bold">Women's Refuge</p>
-                <p>Domestic Violence Crisis Centre - 6280 0900 - 24h Crisis Hotline. DVCS supports all people affected by domestic/family violence. Domestic Violence Crisis Service provides a variety of services from crisis intervention to community education.</p>
-                <p>Beryl Women's Refuge - 6288 1622 - Provides crisis accommodation for women with children escaping domestic violence.</p>
+                <p><span className="niceRed">Domestic Violence Crisis Centre</span></p>
+                <p className="marginCloser">6280 0900</p>
+                <p className="marginCloser">24h Crisis Hotline. DVCS supports all people affected by domestic/family violence. Domestic Violence Crisis Service provides a variety of services from crisis intervention to community education.</p>
+                <p><span className="niceRed">Beryl Women's Refuge</span></p>
+                <p className="marginCloser">6288 1622</p>
+                <p className="marginCloser">Provides crisis accommodation for women with children escaping domestic violence.</p>
               </CardPanel>
             </Modal>
           </Col>
@@ -43,26 +52,37 @@ class ContactDirectory extends Component {
               <p className="bold">NSW service directory</p>
               <CardPanel>
                 <p className="bold">Child Protection</p>
-                <p>Mandatory Reporting - 133 627 (13 DOCS)</p>
+                <p><span className="niceRed">Mandatory Reporting</span></p>
+                <p className="marginCloser">133 627 (13 DOCS)</p>
               </CardPanel>
               <CardPanel>
                 <p className="bold">Mental Health Services</p>
-                <p>Lifeline - 13 11 14 - Available 24 hours a day, seven days per week. Telephone Crisis Support
+                <p><span className="niceRed">Lifeline</span></p>
+                <p className="marginCloser">13 11 14</p>
+                <p className="marginCloser">Available 24 hours a day, seven days per week. Telephone Crisis Support
                   volunteers provide skilled and knowledgeable support to callers when in crisis.</p>
-                <p>Mental Health Access Line - 1800 011 511 - provides 24 hour mental health connection and
+                <p><span className="niceRed">Mental Health Access Line</span></p>
+                <p className="marginCloser">1800 011 511</p>
+                <p className="marginCloser">Provides 24 hour mental health connection and
                   referral services and is staffed by mental health professionals.</p>
               </CardPanel>
               <CardPanel>
                 <p className="bold">Youth Refuges</p>
-                <p>The Girls Refuge - 9564 3638 - has seven beds - six for girls and young women (13-17 yr olds)
+                <p><span className="niceRed">The Girls Refuge</span></p>
+                <p className="marginCloser">9564 3638</p>
+                <p className="marginCloser">Has seven beds - six for girls and young women (13-17 yr olds)
                   to stay up to three months and one crisis bed for overnight stays.</p>
-                <p>Taldumande Young people’s accommodation - 0414 308 533 - For 12- 18 year olds (male & female).
+                <p><span className="niceRed">Taldumande Young people’s accommodation</span></p>
+                <p className="marginCloser">0414 308 533</p>
+                <p className="marginCloser">For 12- 18 year olds (male & female).
                   There are six beds for stays up to three months, plus one crisis bed for stays up to seven days.
                   $55 per week (includes all food, rent, bills, toiletries, sheets, blankets, towels, clothing and books).</p>
               </CardPanel>
               <CardPanel>
                 <p className="bold">Homelessness</p>
-                <p>Link 2 Home - 1800 152 152 - Mostly for people who are permanent residents or
+                <p><span className="niceRed">Link 2 Home</span></p>
+                <p className="marginCloser">1800 152 152</p>
+                <p className="marginCloser">Mostly for people who are permanent residents or
                   citizens or for clients experiencing domestic violence</p>
               </CardPanel>
             </Modal>
