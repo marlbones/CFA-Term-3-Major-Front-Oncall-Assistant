@@ -12,7 +12,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                   <p>ACT</p>
                 </CardPanel>
               }>
@@ -45,7 +45,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>NSW</p>
                  </CardPanel>
               }>
@@ -92,7 +92,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>QLD</p>
                  </CardPanel>
               }>
@@ -102,7 +102,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>SA</p>
                  </CardPanel>
               }>
@@ -114,7 +114,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>TAS</p>
                  </CardPanel>
               }>
@@ -124,7 +124,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>VIC</p>
                  </CardPanel>
               }>
@@ -136,7 +136,7 @@ class ContactDirectory extends Component {
           <Col className="col s6">
             <Modal
               trigger={
-                <CardPanel>
+                <CardPanel className="cursorChange">
                    <p>WA</p>
                  </CardPanel>
               }>

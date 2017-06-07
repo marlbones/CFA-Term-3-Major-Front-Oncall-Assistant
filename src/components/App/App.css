@@ -1,3 +1,15 @@
+p {
+  font-family: 'Lato', sans-serif;
+}
+
+span {
+  font-family: 'Lato', sans-serif;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -11,6 +23,7 @@
 
 .main-header {
   margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-intro {
