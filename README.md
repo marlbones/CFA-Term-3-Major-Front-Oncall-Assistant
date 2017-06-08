@@ -86,10 +86,10 @@ Trello was used to build user stories and manage/schedule project tasks/agile de
 
 #### Wireframes/User Journery
 Used Sketch to combine wireframes and user journey/flow. Final product changed from concept depicted below, but a lot of elements remained true to concept.
-![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496893321/Screen_Shot_2017-06-08_at_1.39.57_pm_fadi3e.png)
-![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496893320/Screen_Shot_2017-06-08_at_1.40.10_pm_f6knkt.png)
-![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496893321/Screen_Shot_2017-06-08_at_1.40.22_pm_dagr39.png)
-![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496893322/Screen_Shot_2017-06-08_at_1.40.32_pm_aydtv1.png)
+![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496899067/Screen_Shot_2017-06-08_at_3.15.55_pm_c9kumz.png)
+![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496899066/Screen_Shot_2017-06-08_at_3.16.38_pm_bvmqi6.png)
+![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496899067/Screen_Shot_2017-06-08_at_3.16.10_pm_abcnqx.png)
+![wireframes](http://res.cloudinary.com/dabq7kxo6/image/upload/v1496899067/Screen_Shot_2017-06-08_at_3.16.25_pm_t3idiy.png)
 
 #### ERD
 Sketch was also used to develop the ERD. ERD remained the same the whole process as only two databases were required.
