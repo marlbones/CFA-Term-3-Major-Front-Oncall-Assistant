@@ -36,7 +36,7 @@ The on-call case manager requires a selection of resources to assist them with t
 #### Solution
 After discussing the problem with the client extensively, they came to the conclusion that a solution to this problem would be a platform that holds all of this information in an easily accessible, easy to use place.
 
-#### Hamper
+#### On-Call Assistant
 On-Call Assistant is a prototype web platform that aims to support on-call case managers by providing an easily accessible space to access on-call resources that are important to providing an effective on-call service. It is designed to be used alongside the organisations internal database systems and can be used on mobile devices.
 
 Getting Started
