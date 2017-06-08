@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   getClients () {
-    const URL = 'http://oncallback.herokuapp.com/clients'
+    const URL = 'https://oncallback.herokuapp.com/clients'
     axios.get(URL)
         .then((response) => {
           this.setState({ clients: response.data })
@@ -38,7 +38,7 @@ class App extends Component {
   };
 
   getCallouts () {
-    const URL = 'http://oncallback.herokuapp.com/callouts'
+    const URL = 'https://oncallback.herokuapp.com/callouts'
     axios.get(URL)
       .then((response) => {
         console.log(response.data)

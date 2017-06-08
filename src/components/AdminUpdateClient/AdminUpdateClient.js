@@ -6,7 +6,7 @@ import { Button } from 'react-materialize';
 class AdminUpdateClient extends Component {
 
   deleteAction(client, id) {
-  const URL = 'http://oncallback.herokuapp.com/clients/';
+  const URL = 'https://oncallback.herokuapp.com/clients/';
   const clientRemove = URL + id
   axios.delete(clientRemove)
     .then((response) => {
