@@ -5,6 +5,7 @@ import Callouts from '../Callouts/Callouts';
 import OnCallGuide from '../OnCallGuide/OnCallGuide';
 import DistressedCaller from '../DistressedCaller/DistressedCaller';
 import ContactDirectory from '../ContactDirectory/ContactDirectory';
+import Admin from '../Admin/Admin';
 import axios from 'axios';
 import { CardPanel, Row, Col, Modal, Button } from 'react-materialize';
 var _ = require('lodash');
@@ -122,7 +123,7 @@ class App extends Component {
                        <span>Admin</span>
                      </CardPanel>
                   }>
-                  <p>Admin capabilities in development.</p>
+                  <Admin getClients={() => this.getClients()} clients={this.state.clients} />
                 </Modal>
               </div>
             </Col>
