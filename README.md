@@ -66,7 +66,7 @@ http://localhost:3000
 
 Dependencies to install:
 
-| Gem     | Installation | 	Usage   |
+| npm     | Installation | 	Usage   |
 | :------- | ----: | :---: |
 | axios | yarn add 'axios' |  creates http request/response   |
 | lodash | yarn add 'lodash' |  js library    |
