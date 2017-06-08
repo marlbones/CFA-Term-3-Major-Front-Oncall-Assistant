@@ -30,7 +30,6 @@ class Callouts extends Component {
     if(event.target.checked) {
       var array = this.state.selectedMonths
       array.push(event.target.value)
-      console.log(array)
       this.setState({selectedMonths: array})
   } else {
       console.log(event.target.checked);
